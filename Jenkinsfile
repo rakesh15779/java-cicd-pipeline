@@ -63,7 +63,7 @@ pipeline {
 
                         scp -i $secureKey -o StrictHostKeyChecking=no `
                             "$env:WORKSPACE\\target\\java-cicd-pipeline-1.0.0.jar" `
-                            "$env:SSH_USER@$env:UBUNTU_HOST:$env:REMOTE_DIR/target/java-cicd-pipeline-1.0.0.jar"
+                            "${env:SSH_USER}@${env:UBUNTU_HOST}:${env:REMOTE_DIR}/target/java-cicd-pipeline-1.0.0.jar"
 
                         if ($LASTEXITCODE -ne 0) {
                             throw "JAR copy to Ubuntu failed"
