@@ -1,0 +1,7 @@
+java-cicd-pipeline/
+├── src/
+├── screenshots/       ← Create here
+├── Dockerfile
+├── Jenkinsfile
+├── pom.xml
+└── README.md
